@@ -13,6 +13,7 @@ CONFIG += console
 SOURCES += \
     board.cpp \
     chess.cpp \
+    game_square.cpp \
     main.cpp \
     mainwindow.cpp \
     pawn_white.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 HEADERS += \
     board.h \
     chess.h \
+    game_square.h \
     mainwindow.h \
     pawn_white.h \
     pieces.h \

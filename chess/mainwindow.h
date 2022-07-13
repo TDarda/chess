@@ -5,6 +5,7 @@
 #include <QLabel>
 #include <QRegularExpression>
 #include "chess.h"
+#include "game_square.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,6 +21,8 @@ public:
     chess game;
     ~MainWindow();
 
+private slots:
+    void mouse_pressed();
 
 private:
     Ui::MainWindow *ui;

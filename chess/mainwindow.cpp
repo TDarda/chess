@@ -13,11 +13,19 @@ MainWindow::MainWindow(QWidget *parent)
     game.gameboard.setGameSquares(this->findChildren<QLabel*>(QRegularExpression("square_\\d+$")));
     game.gameboard.wypisz();
     game.set_pieces_on_board();
+    connect(ui->square_1, SIGNAL(clicked()), this, SLOT(mouse_pressed()));
 
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::mouse_pressed()
+{
+    ui->square_40->setPixmap(QPixmap(":/resource/pawn_white"));
+    ui->square_40->setScaledContents(true);
+
 }
 
