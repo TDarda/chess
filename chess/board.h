@@ -5,7 +5,7 @@
 #include<iostream>
 #include<algorithm>
 #include "square.h"
-
+#include "game_square.h"
 
 class board
 {

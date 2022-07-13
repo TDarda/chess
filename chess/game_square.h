@@ -4,15 +4,18 @@
 #include <QLabel>
 #include <QWidget>
 #include <QMouseEvent>
-#include <QDebug>
-#include <Qt>
+#include "pieces.h"
+
 class game_square : public QLabel
 {
    Q_OBJECT
 public:
     game_square(QWidget * parent = 0);
-
     void mousePressEvent(QMouseEvent * event);
+    std::shared_ptr<pieces> direct_pieces;
+    std::shared_ptr<QLabel>  direct_label;
+    void set_direct_label(QLabel* label);
+    bool its_occupied;
 signals:
 
     void clicked();
