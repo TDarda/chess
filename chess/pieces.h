@@ -2,8 +2,9 @@
 #define PIECES_H
 
 #include<QPixmap>
-#include "square.h"
+#include "game_square.h"
 #include "assets.h"
+
 
 class pieces
 {
@@ -15,8 +16,8 @@ public:
     bool is_black;
     std::vector<int> move_possibility;
     virtual std::vector<int> return_move_possibility()=0;
-    virtual void put_on_board(square * s)=0;
-    virtual void start(std::vector<pieces*>& p, QList<square*> &gameSquers)=0;
+    virtual void put_on_board(game_square * s)=0;
+    virtual void start(std::vector<pieces*>& p, QList<game_square*> &gameSquers)=0;
     std::vector<unsigned>start_pos;
 
 };

@@ -4,7 +4,8 @@
 #include <QLabel>
 #include <QWidget>
 #include <QMouseEvent>
-#include "pieces.h"
+
+class pieces;
 
 class game_square : public QLabel
 {

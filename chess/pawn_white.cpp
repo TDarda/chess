@@ -12,7 +12,7 @@ std::vector<int> pawn_white::return_move_possibility()
     return std::vector<int>{0};
 }
 
-void pawn_white::put_on_board(square * s)
+void pawn_white::put_on_board(game_square * s)
 {
     if(!s->its_occupied)
     {
@@ -28,7 +28,7 @@ void pawn_white::put_on_board(square * s)
 
 }
 
-void pawn_white::start(std::vector<pieces*>& p, QList<square*> & s)
+void pawn_white::start(std::vector<pieces*>& p, QList<game_square*> & s)
 {
     for(int i=0;i<8;i++)
     {

@@ -11,13 +11,15 @@ void board::setGameSquares(QList<QLabel*> list)
 {
     for(int i = 0;i<list.size();i++)
     {
-        gameSquers.emplaceBack(new square(list[i]));
+        gameSquers.emplaceBack(new game_square());
+        gameSquers[i]->set_direct_label(list[i]);
+
     }
 
 
 }
 
-bool labelLessThan( square *l1,  square *l2)
+bool labelLessThan( game_square *l1,  game_square *l2)
 {
     auto leftStr = l1->direct_label->objectName().toStdString();
     auto rightStr = l2->direct_label->objectName().toStdString();
@@ -48,6 +50,6 @@ void board::wypisz()
     for(auto i = 0;i<gameSquers.size(); i++)
     {
         auto temp = gameSquers.at(i)->direct_label->objectName().toStdString();
-        std::cout<<temp<<" "<<std::endl;
+        std::cout<<temp<<std::endl;
     }
 }
