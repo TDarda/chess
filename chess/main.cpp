@@ -11,6 +11,4 @@ int main(int argc, char *argv[])
 }
 
 /*co jeszcze zrobic?
-zamienic raw pointery na smart pointery moze share_ptr
-
-pointer na square w klasie pieces, wydaje mi sie nie potrzebny*/
+dlaczego co kttoras kompilacja znika mi pionek albo kilka pionkow?*/

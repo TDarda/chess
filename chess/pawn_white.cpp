@@ -14,7 +14,7 @@ std::vector<int> pawn_white::return_move_possibility()
 
 void pawn_white::put_on_board(game_square * s)
 {
-    if(!s->its_occupied)
+    if(!(s->its_occupied))
     {
         s->direct_label->setPixmap(QPixmap(":/resource/empty"));
         s->its_occupied=false;

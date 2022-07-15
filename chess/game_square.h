@@ -16,7 +16,7 @@ public:
     std::shared_ptr<pieces> direct_pieces;
     std::shared_ptr<QLabel>  direct_label;
     void set_direct_label(QLabel* label);
-    bool its_occupied;
+    bool its_occupied = false;
 signals:
 
     void clicked();

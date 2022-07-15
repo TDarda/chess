@@ -11,7 +11,7 @@ void board::setGameSquares(QList<QLabel*> list)
 {
     for(int i = 0;i<list.size();i++)
     {
-        gameSquers.emplaceBack(new game_square());
+        gameSquers.push_back(new game_square());
         gameSquers[i]->set_direct_label(list[i]);
 
     }

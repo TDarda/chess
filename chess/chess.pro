@@ -17,8 +17,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     pawn_white.cpp \
-    pieces.cpp \
-    square.cpp
+    pieces.cpp
 
 HEADERS += \
     board.h \
@@ -26,8 +25,7 @@ HEADERS += \
     game_square.h \
     mainwindow.h \
     pawn_white.h \
-    pieces.h \
-    square.h
+    pieces.h
 
 FORMS += \
     mainwindow.ui
