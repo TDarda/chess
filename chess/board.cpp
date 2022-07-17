@@ -7,13 +7,13 @@ board::board()
 {
 
 }
-void board::setGameSquares(QList<QLabel*> list)
+void board::setGameSquares(QList<game_square*> list)
 {
     for(int i = 0;i<list.size();i++)
     {
-        gameSquers.push_back(new game_square());
+        gameSquers.push_back(list[i]);
         gameSquers[i]->set_direct_label(list[i]);
-
+        gameSquers[i]->style = list[i]->styleSheet();
     }
 
 

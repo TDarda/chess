@@ -12,9 +12,10 @@ class board
 public:
     QList<game_square*> gameSquers;
     board();
-    void setGameSquares(QList<QLabel*> list);
+    void setGameSquares(QList<game_square*> list);
     void wypisz();
-
+    QString marked_piece;
+    QString move_posibility;
 
 };
 

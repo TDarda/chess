@@ -14,9 +14,11 @@ public:
     game_square(QWidget * parent = 0);
     void mousePressEvent(QMouseEvent * event);
     std::shared_ptr<pieces> direct_pieces;
-    std::shared_ptr<QLabel>  direct_label;
-    void set_direct_label(QLabel* label);
-    bool its_occupied = false;
+    std::shared_ptr<game_square>  direct_label;
+    void set_direct_label(game_square* label);
+    QString style;
+    bool is_occupied = false;
+    bool is_clicked = false;
 signals:
 
     void clicked();

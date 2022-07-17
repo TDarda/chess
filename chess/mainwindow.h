@@ -19,6 +19,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     chess game;
+    game_square * square_handler=nullptr;
     ~MainWindow();
 
 private slots:
