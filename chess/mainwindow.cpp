@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     game.gameboard.setGameSquares(this->findChildren<game_square*>(QRegularExpression("square_\\d+$")));
     game.gameboard.wypisz();
     game.set_pieces_on_board();
+    handler.set_gameboard(game.gameboard.gameSquers);
 
     for(auto square : game.gameboard.gameSquers)
     {
@@ -29,18 +30,9 @@ void MainWindow::mouse_pressed()
 {
   auto temp = (game_square *)QObject::sender();
 
+  handler.mark_and_show_moves(temp);
 
-  if(temp->is_occupied && !temp->is_clicked)
-   {
-      if(square_handler!=nullptr&& square_handler->is_clicked)
-      {
-          square_handler->setStyleSheet(square_handler->style);
-          square_handler->is_clicked=false;
-      }
-    square_handler = temp;
-    square_handler->is_clicked=true;
-    square_handler->setStyleSheet("background-color : black;");
-   }
+
 
 }
 

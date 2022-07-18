@@ -16,16 +16,20 @@ SOURCES += \
     game_square.cpp \
     main.cpp \
     mainwindow.cpp \
+    pawn_black.cpp \
     pawn_white.cpp \
-    pieces.cpp
+    pieces.cpp \
+    square_handler.cpp
 
 HEADERS += \
     board.h \
     chess.h \
     game_square.h \
     mainwindow.h \
+    pawn_black.h \
     pawn_white.h \
-    pieces.h
+    pieces.h \
+    square_handler.h
 
 FORMS += \
     mainwindow.ui

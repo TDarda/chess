@@ -6,6 +6,8 @@
 #include <QRegularExpression>
 #include "chess.h"
 #include "game_square.h"
+#include "square_handler.h"
+#include <algorithm>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,7 +21,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     chess game;
-    game_square * square_handler=nullptr;
+    square_handler handler;
     ~MainWindow();
 
 private slots:

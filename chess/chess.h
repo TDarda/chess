@@ -2,6 +2,9 @@
 #define CHESS_H
 #include"board.h"
 #include"pawn_white.h"
+#include"pawn_black.h"
+
+class square_handler;
 
 class chess
 {

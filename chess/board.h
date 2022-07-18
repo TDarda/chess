@@ -10,12 +10,12 @@ class board
 {
 
 public:
-    QList<game_square*> gameSquers;
+    std::vector<game_square*> gameSquers;
     board();
     void setGameSquares(QList<game_square*> list);
     void wypisz();
     QString marked_piece;
-    QString move_posibility;
+    QString mark_posibility;
 
 };
 

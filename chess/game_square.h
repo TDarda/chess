@@ -19,6 +19,7 @@ public:
     QString style;
     bool is_occupied = false;
     bool is_clicked = false;
+    bool ready_to_go = false;
 signals:
 
     void clicked();
