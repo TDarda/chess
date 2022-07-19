@@ -16,7 +16,10 @@ void square_handler::show_moves(game_square * gs)
 auto temp = (std::find(std::begin(gameboard), std::end(gameboard), gs));
     for(uint i = 0; i < gs->direct_pieces->move_possibility.size(); i++)
     {
+        if(std::find(std::begin(gameboard), std::end(gameboard), *(temp+gs->direct_pieces->move_possibility[i]))!=std::end(gameboard))
+        {
         possible_move.push_back(*(temp+gs->direct_pieces->move_possibility[i]));
+        }
     }
 for(auto it : possible_move)
 {
@@ -49,7 +52,7 @@ void square_handler::mark_and_show_moves(game_square * gs)
       handler = *(std::find(std::begin(gameboard), std::end(gameboard), gs));
 
       handler->is_clicked=true;
-      handler->setStyleSheet("background-color : black;");
+      handler->setStyleSheet("background-color : blue;");
       show_moves(handler);
 }
 }
