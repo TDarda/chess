@@ -4,6 +4,6 @@ king_white::king_white()
 {
     is_black=false;
     skin=QPixmap(":/resource/king_white");
-    start_pos={60};
-    move_possibility={-8};
+    start_pos={4};
+    //move_possibility={};
 }

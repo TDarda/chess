@@ -4,7 +4,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , game()
+    //, game()
     , ui(new Ui::MainWindow) 
 {
 
@@ -15,9 +15,12 @@ MainWindow::MainWindow(QWidget *parent)
     game.set_pieces_on_board();
     handler.set_gameboard(game.gameboard.gameSquers);
 
-    for(auto square : game.gameboard.gameSquers)
+    for(int i = 0; i < 8; i++)
     {
-        connect(square->direct_label.get(), SIGNAL(clicked()), this, SLOT(mouse_pressed()));
+        for(auto square : game.gameboard.gameSquers[i])
+        {
+            connect(square->direct_label.get(), SIGNAL(clicked()), this, SLOT(mouse_pressed()));
+        }
     }
 }
 

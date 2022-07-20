@@ -15,7 +15,7 @@ class pieces
 public:
     pieces();
     bool is_black;
-    std::vector<int> move_possibility;
+    std::vector<std::pair<int,int>> move_possibility;
     virtual void put_on_board(game_square * s);
     std::vector<unsigned>start_pos;
 

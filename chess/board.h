@@ -10,7 +10,7 @@ class board
 {
 
 public:
-    std::vector<game_square*> gameSquers;
+    std::vector<std::vector<game_square*>> gameSquers;
     board();
     void setGameSquares(QList<game_square*> list);
     void wypisz();
